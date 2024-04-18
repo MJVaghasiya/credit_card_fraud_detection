@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            text-align: center;
+            background: #ecf0f3;
+
+        }
+        .fraud{
+font-weight: 700;
+font-family: "Sedan", serif;
+word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    {% if is_fraud == 'fraud' %}
+        <p><strong class="fraud">FRAUD TRANSACTION DETECTED!</strong></p>
+    {% else %}
+        <p><strong class="fraud">NOT A FRAUD TRANSACTION</strong></p>
+    {% endif %}
+</body>
+</html>
